@@ -1,2 +1,2 @@
 # pjoc-pay
-A middleware for pay. Easily develop we chat pay and ali pay
+A middleware of payment. Makes you easier to develop WeChatPay and AliPay etc.
