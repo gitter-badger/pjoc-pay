@@ -25,6 +25,7 @@
 
         <commons.fileupload.version>1.2</commons.fileupload.version>
         <javax.mail.version>1.5.4</javax.mail.version>
+        <javax.servlet.version>2.5</javax.servlet.version>
         <sun.mail.version>1.5.4</sun.mail.version>
         <!--<javax.mail.version>1.4</javax.mail.version>-->
         <!--<sun.mail.version>1.4.4</sun.mail.version>-->
@@ -70,6 +71,11 @@
     </profiles>
 
     <dependencies>
+        <dependency>
+            <groupId>com.xiongyingqi</groupId>
+            <artifactId>common_helper</artifactId>
+        </dependency>
+
         <dependency>
             <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>
@@ -284,10 +290,16 @@
                 </exclusions>
             </dependency>
 
+            <!--servlet api-->
             <dependency>
                 <groupId>org.apache.tomcat</groupId>
                 <artifactId>tomcat-servlet-api</artifactId>
                 <version>${tomcat.servlet.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>javax.servlet</groupId>
+                <artifactId>servlet-api</artifactId>
+                <version>${javax.servlet.version}</version>
             </dependency>
 
             <!-- Logging with SLF4J & LogBack -->
@@ -499,10 +511,10 @@
             <artifactId>maven-surefire-plugin</artifactId>
             <version>2.13</version>
         </plugin>
-        <!--<plugin>
+        <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-checkstyle-plugin</artifactId>
-        </plugin>-->
+        </plugin>
     </plugins>
 
     <pluginManagement>
